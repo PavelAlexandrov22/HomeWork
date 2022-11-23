@@ -13,7 +13,7 @@ public class BItsbytes {
             System.out.println("введите количество байт");
             double b = scanner.nextDouble();
             double result1 = b / 1024;
-            System.out.println( result1 + "килобайт");
+            System.out.println( result1 + " килобайт");
 
         }else if(a == 2){
             System.out.println("введите количество килобайт");
@@ -21,12 +21,8 @@ public class BItsbytes {
             double result2 = c * 1024;
             System.out.println( result2 + "байт");
         }
-
-
-
-
-
-
     }
+
+
 
 }

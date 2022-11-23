@@ -15,9 +15,6 @@ public class Take3 {
         int randomNamber3 = a + (int) (Math.random() * b); //генерация 3-го числа
         System.out.println("1-ое случайное числ:" + randomNamber3);
 
-
-
-
-
     }
+
 }

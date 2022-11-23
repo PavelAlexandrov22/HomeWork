@@ -16,4 +16,5 @@ public class AverageNumber {
         System.out.println(" Среднее число" + average);
 
     }
+
 }
