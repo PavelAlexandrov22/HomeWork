@@ -7,11 +7,10 @@ public class Take1_5_1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите число");
         int a = scanner.nextInt();
-        int b = (Math.abs(a));
         int max = 0;
         if (a != 0) {
             while (a > 0) {
-                if (a % 10 > max) max = (int) (a % 10);
+                if (a % 10 > max) max = a % 10;
                 a /= 10;
             }
             System.out.println("Наибольшей цифрой является  " + max);

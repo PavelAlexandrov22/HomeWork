@@ -1,18 +1,29 @@
 package home_work_1.take6;
 
+import java.util.Scanner;
+
 public class Main6_1 {
+    private static String name;
+
     public static void main(String[] args) {
-        String name = "Анастасия";
+        System.out.println("Введите ваше имя");
+        Scanner console = new Scanner(System.in);
+        name = console.nextLine();
+        System.out.println(Main6(name));
+
+    }
+    public static String Main6(String name){
+
 
         if(name == "Вася"){
-            System.out.println("Привет!");
-            System.out.println("Я тебя так долго ждал");
+            return "Привет!\nЯ тебя так долго ждал";
         } else {
             if(name == "Анастасия"){
-                System.out.println("Я тебя так долго ждал");
+                return"Я тебя так долго ждал";
             } else {
-                System.out.println("Добрый день, а вы кто?");
+                return "Добрый день, а вы кто?";
             }
         }
+
     }
 }

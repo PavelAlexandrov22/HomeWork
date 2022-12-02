@@ -1,6 +1,8 @@
 package home_work_1.take6;
 
 
+
+
 import java.util.Scanner;
 
 public class Main6_3 {
@@ -24,7 +26,9 @@ public class Main6_3 {
 
         }
 
-    }
+
+
+}
 
 
 

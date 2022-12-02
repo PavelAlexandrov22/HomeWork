@@ -8,19 +8,22 @@ public class Main6_4 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите Ваше имя");
         String name = console.nextLine();
-
+        System.out.println(grisha(name));
+    }
+    public static String grisha(String name){
         String friend = "Вася";
         String girlfriend = "Анастасия";
 
         if(Objects.equals(friend, name)){
-            System.out.println("Привет!");
-            System.out.println("Я тебя так долго ждал");
+           return "Привет!\nЯ тебя так долго ждал";
+
         } else {
             if(Objects.equals(name, girlfriend)){
-                System.out.println("Я тебя так долго ждал");
+                return"Я тебя так долго ждал";
             } else {
-                System.out.println("Добрый день, а вы кто?");
+                return"Добрый день, а вы кто?";
             }
         }
+
     }
 }

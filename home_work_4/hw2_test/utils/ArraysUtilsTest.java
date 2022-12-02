@@ -1,4 +1,4 @@
-package tests.hw2.utils;
+package home_work_4.hw2_test.utils;
 
 import home_work_2.utils.ArraysUtils;
 import org.junit.jupiter.api.Assertions;

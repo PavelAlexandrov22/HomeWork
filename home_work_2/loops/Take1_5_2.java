@@ -9,11 +9,17 @@ public class Take1_5_2 {
         int min = scanner.nextInt();
         int max = scanner.nextInt();
         int step = scanner.nextInt();
+        System.out.println(valera(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
 
+
+    }
+    public static String valera(int min, int max, int step){
         for (int i = min; i < max ; i+= step) {
-            System.out.println(" Шаг " + i);
+           return " Шаг " + i;
 
-            
+
         }
+        return valera(min, max, step);
+
     }
 }
