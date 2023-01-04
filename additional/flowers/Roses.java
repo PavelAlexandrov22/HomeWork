@@ -1,10 +1,15 @@
 package additional.flowers;
 
 public class Roses implements IFlowers {
-    private int expirationDate = 24;
+    private int lives;
+
+    public Roses(int lives) {
+        this.lives = lives;
+    }
 
     @Override
     public int getExpirationDate() {
-        return expirationDate;
+        return lives;
     }
+
 }

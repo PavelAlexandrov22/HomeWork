@@ -1,4 +1,6 @@
-public class Main12 {
+package additional.flowers;
+
+public class Main1 {
     public static void main(String[] args) {
         int[] flowers = new int[4];
         flowers[0] = 3;

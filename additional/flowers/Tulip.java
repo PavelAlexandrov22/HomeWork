@@ -1,11 +1,14 @@
 package additional.flowers;
 
 public class Tulip implements IFlowers{
-    int expirationDate = 48;
-    @Override
-    public int getExpirationDate() {
-        return expirationDate;
+  private int lives;
+
+    public Tulip(int lives) {
+        this.lives = lives;
     }
 
-
+    @Override
+    public int getExpirationDate() {
+        return lives;
+    }
 }
