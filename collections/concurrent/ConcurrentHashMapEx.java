@@ -7,10 +7,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class ConcurrentHashMapEx {
     public static void main(String[] args) throws InterruptedException {
         long start = System.currentTimeMillis();
-       ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
-       map.putIfAbsent(1, "Pasha");
-       map.putIfAbsent(22, "Dasha");
-       map.putIfAbsent(12, "Summer");
+        ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
+        map.putIfAbsent(1, "Pasha");
+        map.putIfAbsent(22, "Dasha");
+        map.putIfAbsent(12, "Summer");
         System.out.println(map);
 
         Runnable r1 = () ->{
