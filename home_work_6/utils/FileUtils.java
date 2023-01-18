@@ -1,4 +1,4 @@
-package hw6.utils;
+package home_work_6.utils;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

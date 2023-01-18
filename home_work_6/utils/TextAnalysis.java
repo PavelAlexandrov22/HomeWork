@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-public class TextFileUtils {
+public class TextAnalysis {
     private static final String SPLIT_REGEX = "(^|[^\\p{L}\\p{Mn}\\p{Nd}\\p{Pc}-]|(--)|(\\s-)|$)+";
 
 

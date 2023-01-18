@@ -1,7 +1,7 @@
-package hw6;
+package home_work_6.utils;
 
 
-import hw6.api.ISearchEngine;
+import home_work_6.api.ISearchEngine;
 
 public class EasySearch implements ISearchEngine {
 
@@ -44,11 +44,7 @@ public class EasySearch implements ISearchEngine {
     private boolean validSymbolBeforeFoundWord(String text, int currentPosition){
         char charAt = text.charAt(currentPosition - 1);
         if(charAt == '-'){
-            if(currentPosition - 2 >= 0 && text.charAt(currentPosition - 2) == ' '){
-                return true;
-            } else {
-                return false;
-            }
+            return currentPosition - 2 >= 0 && text.charAt(currentPosition - 2) == ' ';
         }
         for (char symbol : VALID_BEFORE_SYMBOLS) {
             if(symbol == charAt){

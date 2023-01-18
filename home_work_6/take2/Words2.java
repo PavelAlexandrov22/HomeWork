@@ -9,7 +9,7 @@ import java.nio.file.Path;
 
 public class Words2 {
     public static void main(String[] args) throws IOException {
-      String path = Files.readString(Path.of("C:\\Users\\alexa\\IdeaProject\\Course\\JD1\\HomeWork\\src\\home_work_6\\War_And_Peace.txt"));
+      String path = Files.readString(Path.of("C:\\Users\\alexa\\IdeaProject\\Course\\JD1\\HomeWork\\src\\home_work_6\\Война и мир_книга.txt"));
         int count = 0;
         if(path.length() != 0){
             count++;

@@ -1,7 +1,8 @@
-package hw6;
+package home_work_6.utils;
 
 
-import hw6.api.ISearchEngine;
+import home_work_6.api.ISearchEngine;
+
 
 public class RegExSearch implements ISearchEngine {
     @Override
