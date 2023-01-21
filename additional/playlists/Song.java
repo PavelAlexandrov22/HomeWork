@@ -63,5 +63,10 @@ public class Song implements Serializable {
         this.lenght = lenght;
     }
 
-
+    @Override
+    public String toString() {
+        int minutes = (this.lenght % 3600) / 60;
+        int seconds = this.lenght % 60;
+        return String.format("%s – %s %d:%d", this.lenght, this.artist, minutes, seconds);
+    }
 }
