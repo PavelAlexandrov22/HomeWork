@@ -1,4 +1,4 @@
-package control.shop;
+package additional.control.shop;
 
 public class Product {
 

@@ -1,4 +1,4 @@
-package control.numbers;
+package additional.control.numbers;
 
 public class ThreeNumbers {
     public static void main(String[] args) {

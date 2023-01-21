@@ -1,19 +1,18 @@
-package collections.concurrent;
+package additional.collections;
 
 
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.concurrent.ConcurrentNavigableMap;
-import java.util.concurrent.ConcurrentSkipListMap;
 
-public class ConcurrentNavigableMapEx {
+
+public class HashMapEx {
     public static void main(String[] args) throws InterruptedException {
         long start = System.currentTimeMillis();
-        ConcurrentNavigableMap<Integer, String> map = new ConcurrentSkipListMap<>();
+        HashMap<Integer, String> map = new HashMap<>();
         map.putIfAbsent(1, "Pasha");
         map.putIfAbsent(22, "Dasha");
         map.putIfAbsent(12, "Summer");
         System.out.println(map);
-
         Runnable r1 = () ->{
             Iterator<Integer> it = map.keySet().iterator();
             while (it.hasNext()){
@@ -47,7 +46,7 @@ public class ConcurrentNavigableMapEx {
 
         System.out.println(map);
         long stop = System.currentTimeMillis();
-        System.out.println("speed: " + (stop - start));
+        System.out.println(stop - start);
 
     }
 }

@@ -1,6 +1,6 @@
-package collections.regular_collections;
+package additional.collections.regular_collections;
 
-import collections.regular_collections.utils.Animal;
+import additional.collections.regular_collections.utils.Animal;
 
 import java.util.ArrayList;
 import java.util.HashSet;

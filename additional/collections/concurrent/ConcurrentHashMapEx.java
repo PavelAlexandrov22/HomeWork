@@ -1,29 +1,29 @@
-package collections.concurrent;
+package additional.collections.concurrent;
 
 
 import java.util.Iterator;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
-public class CopyOnWriteArrayListEx {
+public class ConcurrentHashMapEx {
     public static void main(String[] args) throws InterruptedException {
         long start = System.currentTimeMillis();
-        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList();
-        list.add("Ivan");
-        list.add("Grisha");
-        list.add("Egor");
-        list.add("Pasha");
-        list.add("Leha");
-        System.out.println(list);
+        ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
+        map.putIfAbsent(1, "Pasha");
+        map.putIfAbsent(22, "Dasha");
+        map.putIfAbsent(12, "Summer");
+        System.out.println(map);
 
-        Runnable r1 = () -> {
-            Iterator<String> it = list.iterator();
+        Runnable r1 = () ->{
+            Iterator<Integer> it = map.keySet().iterator();
             while (it.hasNext()){
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                System.out.println(it.next());
+
+                Integer i = it.next();
+                System.out.println(i + ":" + map.get(i));
             }
         };
 
@@ -33,8 +33,8 @@ public class CopyOnWriteArrayListEx {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            list.remove(4);
-            list.add("Masha");
+            map.putIfAbsent(4, "April");
+
         };
 
         Thread thread1 = new Thread(r1);
@@ -43,8 +43,10 @@ public class CopyOnWriteArrayListEx {
         thread2.start();
         thread1.join();
         thread2.join();
-        System.out.println(list);
+
+        System.out.println(map);
         long stop = System.currentTimeMillis();
         System.out.println("speed: " + (stop - start));
+
     }
 }

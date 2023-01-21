@@ -1,13 +1,14 @@
-package collections.concurrent;
+package additional.collections.concurrent;
 
 
 import java.util.Iterator;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentNavigableMap;
+import java.util.concurrent.ConcurrentSkipListMap;
 
-public class ConcurrentHashMapEx {
+public class ConcurrentNavigableMapEx {
     public static void main(String[] args) throws InterruptedException {
         long start = System.currentTimeMillis();
-        ConcurrentHashMap<Integer, String> map = new ConcurrentHashMap<>();
+        ConcurrentNavigableMap<Integer, String> map = new ConcurrentSkipListMap<>();
         map.putIfAbsent(1, "Pasha");
         map.putIfAbsent(22, "Dasha");
         map.putIfAbsent(12, "Summer");

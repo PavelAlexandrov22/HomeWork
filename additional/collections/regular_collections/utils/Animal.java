@@ -1,4 +1,4 @@
-package collections.regular_collections.utils;
+package additional.collections.regular_collections.utils;
 
 import java.io.Serializable;
 

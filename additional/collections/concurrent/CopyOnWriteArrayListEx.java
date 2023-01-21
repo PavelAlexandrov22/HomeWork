@@ -1,29 +1,29 @@
-package collections;
+package additional.collections.concurrent;
 
 
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
 
-
-public class HashMapEx {
+public class CopyOnWriteArrayListEx {
     public static void main(String[] args) throws InterruptedException {
         long start = System.currentTimeMillis();
-        HashMap<Integer, String> map = new HashMap<>();
-        map.putIfAbsent(1, "Pasha");
-        map.putIfAbsent(22, "Dasha");
-        map.putIfAbsent(12, "Summer");
-        System.out.println(map);
-        Runnable r1 = () ->{
-            Iterator<Integer> it = map.keySet().iterator();
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList();
+        list.add("Ivan");
+        list.add("Grisha");
+        list.add("Egor");
+        list.add("Pasha");
+        list.add("Leha");
+        System.out.println(list);
+
+        Runnable r1 = () -> {
+            Iterator<String> it = list.iterator();
             while (it.hasNext()){
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-
-                Integer i = it.next();
-                System.out.println(i + ":" + map.get(i));
+                System.out.println(it.next());
             }
         };
 
@@ -33,8 +33,8 @@ public class HashMapEx {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            map.putIfAbsent(4, "April");
-
+            list.remove(4);
+            list.add("Masha");
         };
 
         Thread thread1 = new Thread(r1);
@@ -43,10 +43,8 @@ public class HashMapEx {
         thread2.start();
         thread1.join();
         thread2.join();
-
-        System.out.println(map);
+        System.out.println(list);
         long stop = System.currentTimeMillis();
-        System.out.println(stop - start);
-
+        System.out.println("speed: " + (stop - start));
     }
 }
